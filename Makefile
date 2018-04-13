@@ -1,4 +1,4 @@
-7#
+#
 # Makefile
 # Date: 12 Apr 2018
 # This makefile is for running the dada2 R script to process 16s sequences
