@@ -1,0 +1,9 @@
+#!/usr/bin/bash
+#$ -cwd
+
+##this code will generate 138 lines of code to run cutadapt on all 138 pairs of raw fastq files
+
+for R1file in lane*R1_001.fastq.gz ; 
+    do R2file=${R1file/R1_001.fastq.gz/R2_001.fastq.gz};
+    echo "cutadapt  -a CTGTCTCTTATACACATCT $R1file $R2file -o $R1file.trimmed -p $R2file.trimmed";
+done
