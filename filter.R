@@ -7,12 +7,12 @@
 library(dada2)
 
 # File parsing
-pathF <- "./" 
-pathR <- "./" 
+pathF <- "/ACTF/Course/mb599_bds_s18/data/share/group3_Rothenberg/adapter_trimmed_data" 
+pathR <- "/ACTF/Course/mb599_bds_s18/data/share/group3_Rothenberg/adapter_trimmed_data" 
 filtpathF <- file.path(pathF, "filtered") # Filtered forward files go into the pathF/filtered/ subdirectory
 filtpathR <- file.path(pathR, "filtered") 
-fastqFs <- sort(list.files(pathF, pattern="fastq.gz"))
-fastqRs <- sort(list.files(pathR, pattern="fastq.gz"))
+fastqFs <- sort(list.files(pathF, pattern="fastq.gz.trimmed"))
+fastqRs <- sort(list.files(pathR, pattern="fastq.gz.trimmed"))
 if(length(fastqFs) != length(fastqRs)) stop("Forward and reverse files do not match.")
 # Filtering
 filterAndTrim(fwd=file.path(pathF, fastqFs), filt=file.path(filtpathF, fastqFs),
