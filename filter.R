@@ -15,7 +15,8 @@ fastqFs <- sort(list.files(pathF, pattern="fastq.gz.trimmed"))
 fastqRs <- sort(list.files(pathR, pattern="fastq.gz.trimmed"))
 if(length(fastqFs) != length(fastqRs)) stop("Forward and reverse files do not match.")
 # Filtering
-filterAndTrim(fwd=file.path(pathF, fastqFs), filt=file.path(filtpathF, fastqFs),
+reads <- filterAndTrim(fwd=file.path(pathF, fastqFs), filt=file.path(filtpathF, fastqFs),
               rev=file.path(pathR, fastqRs), filt.rev=file.path(filtpathR, fastqRs),
               truncLen=c(240,240), maxEE=c(2,5), truncQ=2, maxN=0, rm.phix=TRUE,
               compress=TRUE, verbose=TRUE, multithread=TRUE)
+write.table(x = reads, append = TRUE, sep = "/t")
