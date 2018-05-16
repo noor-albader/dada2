@@ -4,6 +4,9 @@
 #optional steps will be noted as optional/can change
 #the files produced should match the files in the google drive folder
 #some of the tutorials I pulled theses out of (the list is long so  am placing the two used most extensively)
+http://master.bioconductor.org/packages/release/workflows/html/rnaseqGene.html#time
+http://master.bioconductor.org/packages/release/workflows/vignettes/rnaseqGene/inst/doc/rnaseqGene.html
+http://bioconductor.org/packages/devel/bioc/vignettes/DESeq2/inst/doc/DESeq2.html#log-fold-change-shrinkage-for-visualization-and-ranking
 
 #please add more to the list if you use the tutorial/code/explanation 
 ##########################################################################
